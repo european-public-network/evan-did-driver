@@ -1,2 +1,2 @@
 # did-driver
-driver for universal resolver
+evan did driver for universal resolver
