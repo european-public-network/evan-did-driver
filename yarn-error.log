@@ -1,0 +1,67 @@
+Arguments: 
+  /Users/omair/.nvm/versions/node/v11.15.0/bin/node /usr/local/Cellar/yarn/1.19.1/libexec/bin/yarn.js build
+
+PATH: 
+  /Users/omair/.nvm/versions/node/v11.15.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/omair/bin
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  11.15.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/omair/git repositeries/evannetwork/did-driver/package.json: Unexpected token } in JSON at position 628
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.19.1/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.19.1/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.19.1/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "did-driver",
+    "version": "1.0.0",
+    "description": "Universal Resolver DID Driver for the did:evan identity space",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "prepublish": "tsc",
+      "build": "tsc"    
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/evannetwork/did-driver.git"
+    },
+    "keywords": [
+      "did",
+      "did-driver",
+      "resolver"
+    ],
+    "author": "evan GmbH",
+    "license": "Apache-2.0",
+    "bugs": {
+      "url": "https://github.com/evannetwork/did-driver/issues"
+    },
+    "dependencies": {
+      "express": "^4.16.4",
+    },  
+    "devDependencies": {
+      "eslint": "^6.1.0",
+      "eslint-config-airbnb": "^18.0.1",
+      "eslint-config-airbnb-typescript": "^6.3.1",
+      "eslint-plugin-chai-friendly": "^0.5.0",
+      "eslint-plugin-import": "^2.19.1",
+      "typescript": "^3.5.3"
+    },  
+    "homepage": "https://github.com/evannetwork/did-driver#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

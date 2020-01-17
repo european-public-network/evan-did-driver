@@ -1,2 +1,2 @@
 # did-driver
-evan did driver for universal resolver
+Universal Resolver DID Driver for the did:evan identity space
