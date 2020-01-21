@@ -1,4 +1,4 @@
-FROM node:10.15
+FROM node:12
 
 # Create Directory for the Container
 WORKDIR /usr/src/app
