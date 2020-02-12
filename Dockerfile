@@ -11,6 +11,7 @@ COPY package.json .
 
 # Install all Packages
 RUN yarn install
+RUN yarn build
 
 # Copy all other source code to work directory
 ADD . /usr/src/app
