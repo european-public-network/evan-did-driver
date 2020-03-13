@@ -2,17 +2,25 @@ import * as express from "express"
 import { EvanDIDResolver, EvanDIDDocument } from "@evan.network/did-resolver";
 
 
-const resolver = new EvanDIDResolver("https://testcore.evan.network/did/");
+const resolverTestcore = new EvanDIDResolver("https://testcore.evan.network/did/");
+const resolverCore = new EvanDIDResolver("https://core.evan.network/did/");
 const PORT = 8080;
 
 const app = express();
 app.get('/1.0/identifiers/:did', async (req, res) => {
 
-  const didDocument: EvanDIDDocument = await resolver.resolveDid(req.params.did);
-  if (didDocument)
+  let didDocument: EvanDIDDocument;
+  if(req.params.did.indexOf('testcore')) {
+    didDocument = await resolverTestcore.resolveDid(req.params.did);
+  } else {
+    didDocument = await resolverCore.resolveDid(req.params.did);
+  }
+
+  if (didDocument) {
     res.send(didDocument);
-  else
+  } else {
     res.sendStatus(404)
+  }
 });
 
 app.listen(PORT, function () {
