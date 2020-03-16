@@ -10,7 +10,7 @@ const app = express();
 app.get('/1.0/identifiers/:did', async (req, res) => {
 
   let didDocument: EvanDIDDocument;
-  if(req.params.did.indexOf('testcore')) {
+  if (req.params.did.startsWith('did:evan:testcore:')) {
     didDocument = await resolverTestcore.resolveDid(req.params.did);
   } else {
     didDocument = await resolverCore.resolveDid(req.params.did);
