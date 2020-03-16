@@ -19,7 +19,7 @@ app.get('/1.0/identifiers/:did', async (req, res) => {
   if (didDocument) {
     res.send(didDocument);
   } else {
-    res.sendStatus(404)
+    res.sendStatus(404);
   }
 });
 
