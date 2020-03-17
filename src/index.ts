@@ -8,7 +8,6 @@ const PORT = 8080;
 
 const app = express();
 app.get('/1.0/identifiers/:did', async (req, res) => {
-
   let didDocument: EvanDIDDocument;
   if (req.params.did.startsWith('did:evan:testcore:')) {
     didDocument = await resolverTestcore.resolveDid(req.params.did);
