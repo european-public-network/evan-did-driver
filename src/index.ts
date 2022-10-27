@@ -4,7 +4,7 @@ import { EvanDIDResolver, EvanDIDDocument, EvanSidetreeDidDocument } from "@evan
 
 const resolverTestcore = new EvanDIDResolver("https://testcore.evan.network/did/");
 const resolverCore = new EvanDIDResolver("https://core.evan.network/did/");
-const resolverSidetree = new EvanDIDResolver("https://sidetree.evan.network/1.0/identifiers/");
+const resolverSidetree = new EvanDIDResolver("https://sidetree.evan.network/3.0/identifiers/");
 const PORT = 8080;
 
 const app = express();
@@ -14,7 +14,7 @@ app.get('/1.0/identifiers/:did', async (req, res) => {
     didDocument = await resolverSidetree.resolveDid(req.params.did);
   } else if (req.params.did.startsWith('did:evan:testcore:')) {
     didDocument = await resolverTestcore.resolveDid(req.params.did);
-  } else {
+  } else if (req.params.did.startsWith('did:evan:0x')) {
     didDocument = await resolverCore.resolveDid(req.params.did);
   }
 
