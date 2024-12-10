@@ -1,6 +1,6 @@
 {
   "name": "evan-did-driver",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Universal Resolver DID Driver for the did:evan identity space",
   "main": "index.js",
   "scripts": {
